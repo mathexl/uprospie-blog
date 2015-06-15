@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <a href="https://github.com/TryGhost/Ghost"><img src="https://cloud.githubusercontent.com/assets/120485/6622822/c4c639fe-c8e7-11e4-9e64-5bec06c8b4c3.png" alt="Ghost" /></a>
 <a href="https://travis-ci.org/TryGhost/Ghost"><img align="right" src="https://travis-ci.org/TryGhost/Ghost.svg?branch=master" alt="Build status" /></a>
 
@@ -112,3 +113,6 @@ New releases are announced on the [dev blog](http://dev.ghost.org/tag/releases/)
 # Copyright & License
 
 Copyright (c) 2013-2015 Ghost Foundation - Released under the [MIT license](LICENSE).
+=======
+# uprospie-blog
+>>>>>>> 6d5d4cc375e79645319c94020dd8af055c5d10ca

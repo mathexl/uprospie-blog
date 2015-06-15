@@ -1,0 +1,257 @@
+/*[MP]
+UProspie's blog will be built on top of Ghost, which
+is an emerging content management engine.  We will, however,
+be styling a seperate theme for it, something simple
+and minimalist.  Tried to keep the code fairly neat.
+*/
+
+/* [MP]
+Color Scheme:
+Various Greys, the simple rgba(X,X,X,Y) scheme.
+  Namely:
+  rgba(160,160,160,1);
+  rgba(30,30,30,1);
+Red: rgba(245,122,113,1);
+
+
+
+THE QUAD
+*/
+
+
+body{
+  margin:0px;
+  padding:0px;
+  font-family: Lato,sans-serif;
+  width: 100%;
+  position: relative;
+  text-align: center;
+}
+
+.main_logo{
+  width:80px;
+  border-radius: 10px;
+  display: inline-block;
+  margin-top: 50px;
+}
+
+.top{
+  width: 100%;
+  height: 200px;
+  background-color: rgba(245,245,245,1);
+  position: relative;
+  z-index: 1;
+  background-image: url('basicoutline.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.top h1{
+  font-family: Lato, sans-serif;
+  font-size: 12px;
+  color: rgba(30,30,30,1);
+  font-weight: bold;
+  font-weight: 700;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+.top a {
+  text-decoration: none;
+}
+
+.top h2{
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  color: rgba(160,160,160,1);
+  font-family: Lato, sans-serif;
+}
+
+.header{
+  position: absolute;
+  width: 100%;
+  height: 40px;
+  top: 20px;
+  left: 0px;
+  font-family: Lato, sans-serif;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-weight: 700;
+  text-align: right;
+  z-index: 2;
+}
+
+.header a{
+  color: red;
+  margin-left: 0px;
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.header a:hover {
+  opacity: .5;
+}
+
+.article{
+  text-align:justify;
+  padding: 20%;
+  padding-top: 10px;
+  padding-bottom: 0px;
+  box-sizing: border-box;
+  width: 100%;
+  color: rgba(70,70,70,1);
+  font-size: 14px;
+  min-height: calc(100vh - 240px);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+.article h1 {
+  font-size: 24px;
+  color: rgba(245,122,113,1);
+  text-align: center;
+}
+.article h2{
+  color: rgba(140,140,140,1);
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  text-align: center;
+  margin-top: -10px;
+  margin-bottom: 25px;
+}
+.article_features{
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-bottom: 30px;
+  padding-bottom: 40px;
+}
+.article_feature{
+  width: 40%;
+  margin-left: 5%;
+  margin-right: 5%;
+  float:left;
+  text-align: left;
+  margin-bottom: 40px;
+  font-size: 11px;
+  display: inline-block;
+  color: grey;
+  position: relative;
+}
+
+.image {
+  position: absolute;
+  left: 0px;
+  top:0px;
+  width: 100%;
+}
+
+.article_feature a{
+  color: grey;
+}
+.article_feature h1{
+  font-size: 14px;
+  color: rgba(245,122,113,1);
+  margin-bottom: 5px;
+}
+.article_feature h2{
+  font-size: 11px;
+  margin-top: 0px;
+  color: rgba(200,200,200,1);
+}
+
+.encompass{
+  display: inline-block;
+  padding: 60px;
+  background-color: white;
+  z-index: 2;
+  margin-top: 30px;
+  position: relative;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  padding-top: 30px;
+}
+
+.footer{
+  width: 100%;
+  height: 20px;
+  clear:both;
+  background-color: rgba(245,122,113,1);
+  color: white;
+  padding: 3px;
+  box-sizing: border-box;
+  font-size: 10px;
+  margin-top: 30px;
+}
+.divider{
+  font-size: 13px;
+  color: rgba(200,200,200,1);
+  letter-spacing: 2px;
+  margin-top: 30px;
+}
+
+.share{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  color: rgba(150,150,150,1);
+  font-size: 10px;
+}
+
+.share a{
+  color: rgba(150,150,150,1);
+}
+
+.share a:hover{
+  opacity: .5;
+}
+
+/*[MP]
+At 800px is when the right align of the links began
+to get somewhat awkward, so the site radically
+centers and most elements stretch the full width
+of the screen aesthetically.
+
+It is also crucial we make it clear how
+we articleinteracting ith the main website,
+ie if about would lead to an about about th eblog or about
+UProspie is total. Also this Skrilex song I am on right now is so dope
+*/
+
+.article_preview{
+  width: 45%;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  padding: 5%;
+  padding-top: 40px;
+  margin-top: 40px;
+  padding-bottom: 10px;
+  float:left;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+@media screen and (max-width: 800px)
+ {
+   .article{
+     padding: 10%;
+   }
+   .article h1{
+     margin-top: -10px;
+   }
+   .header{
+     text-align: center;
+   }
+   .article_feature{
+     width: 90%;
+   }
+   .article_features {
+     width: 80%;
+     margin-left: 10%;
+     margin-right: 10%;
+   }
+   .article {
+     background-size:contain;
+   }
+ }

@@ -1,0 +1,55 @@
+{{!< default}}
+
+{{! This is a page template. A page outputs content just like any other post, and has all the same
+    attributes by default, but you can also customise it to behave differently if you prefer. }}
+
+{{! Everything inside the #post tags pulls data from the page }}
+{{#post}}
+
+
+
+
+<head>
+  <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <!-- CHECKLIST
+   - Get analytics Scrupt
+   - Start site on Heroku
+   - Ghost
+   - Do Line Art for the top header
+  -->
+</head>
+<body>
+<div class="header">
+
+      {{#if @blog.navigation}}
+
+<!--                     <a href="#"><span class="word">Menu</span></a> -->
+
+          {{/if}}
+</div>
+<div class="top" style="background-image:url({{asset "images/basicoutline.png"}})">
+    <a href="http://blog.uprospie.com">
+      <img src="{{asset "images/logo_red.png"}}" class="main_logo">
+      <h1>{{@blog.title}}</h1>
+    </a>
+
+  <h2>{{@blog.description}}</h2>
+</div>
+
+
+
+
+<main class="content" role="main">
+    <article class="{{post_class}}">
+
+        <header class="post-header">
+            <h1 class="post-title">{{title}}</h1>
+        </header>
+
+        <section class="post-content">
+            {{content}}
+        </section>
+
+    </article>
+</main>
+{{/post}}

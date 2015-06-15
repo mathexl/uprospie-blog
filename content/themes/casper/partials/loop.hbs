@@ -1,0 +1,40 @@
+
+
+
+
+
+
+
+
+
+
+
+{{! This is the post loop - each post will be output using this markup }}
+{{#foreach posts}}
+
+
+<a href="{{url}}" style="text-decoration:none;">
+<div class="article article_preview" style="background-image: url('{{image}}');display:inline-block;">
+  <!--Changing the background iamge
+seemed most elegant via CSS, so jsut had a style tag  -->
+
+  <div class="encompass">
+    <!--<div class="share">SHARE</div>-->
+
+  <h1>{{{title}}}</h1>
+  <h2 style="margin-top:8px;">by {{author}}</h2>
+  <h2>{{date published_at format="MMMM DD, YYYY"}}</h2>
+  <div class="body">
+    <!-- Body Below-->
+    <p>{{excerpt words="26"}} <a class="read-more" href="{{url}}">&raquo;</a></p>
+    </div>
+</div>
+</div>
+</a>
+
+
+
+
+{{/foreach}}
+
+<div style="clear:both;"></div>

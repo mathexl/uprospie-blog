@@ -1,0 +1,73 @@
+{{!< default}}
+
+{{! The comment above "< default" means - insert everything in this file into
+    the {body} of the default.hbs template, which contains our header/footer. }}
+
+{{! Everything inside the #post tags pulls data from the post }}
+{{#post}}
+
+
+<head>
+  <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+  <!-- CHECKLIST
+   - Get analytics Scrupt
+   - Start site on Heroku
+   - Ghost
+   - Do Line Art for the top header
+  -->
+</head>
+<body>
+<div class="header">
+
+      {{#if @blog.navigation}}
+
+<!--                     <a href="#"><span class="word">Menu</span></a> -->
+
+          {{/if}}
+</div>
+<div class="top" style="background-image:url({{asset "images/basicoutline.png"}})">
+    <a href="http://blog.uprospie.com">
+      <img src="{{asset "images/logo_red.png"}}" class="main_logo">
+      <h1>{{@blog.title}}</h1>
+    </a>
+
+  <h2>{{@blog.description}}</h2>
+</div>
+
+<div class="article" style="background-image: url({{image}});padding-left:0px;padding-right:0%;position:relative;">
+  <!--Changing the background iamge
+seemed most elegant via CSS, so jsut had a style tag  -->
+  <!--<div class="share">SHARE</div>-->
+
+  <div class="encompass" style="margin-left:10%;width:80%;box-sizing:border-box;">
+  <h1>{{title}}</h1>
+  <h2 style="text-decoration:none;margin-top:5px;">{{author}} | {{date published_at format="MMMM DD, YYYY"}}</h2>
+     
+      <section class="post-content">
+            {{content}}
+        </section>
+</div>
+</div>
+
+
+
+<aside class="read-next">
+    {{#next_post}}
+    <a class="read-next-story {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+        <section class="post">
+            <h2>{{title}}</h2>
+            <p>{{excerpt words="19"}}&hellip;</p>
+        </section>
+    </a>
+    {{/next_post}}
+    {{#prev_post}}
+    <a class="read-next-story prev {{#if image}}" style="background-image: url({{image}}){{else}}no-cover{{/if}}" href="{{url}}">
+        <section class="post">
+            <h2>{{title}}</h2>
+            <p>{{excerpt words="19"}}&hellip;</p>
+        </section>
+    </a>
+    {{/prev_post}}
+</aside>
+
+{{/post}}
